@@ -2,7 +2,8 @@
   "name": "booking-api-gateway",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js","scripts": {
+  "main": "index.js",
+  "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/rishi1606/booking-api-gateway#readme",
   "dependencies": {
+    "axios": "^1.20.0",
     "express": "^5.2.1"
   },
   "devDependencies": {

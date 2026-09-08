@@ -1,17 +1,26 @@
 const express = require("express");
 
+const axios = require("axios");
+
 const router = express.Router();
 
-router.post("/login", (req, res) => {
-    const { email, password } = req.body;
+router.post("/login", async (req, res) => {
+    try {
+        const response = await axios.post(
+            "http://localhost:8000/login",
+            req.body
+        );
 
-    console.log("Login request received");
-    console.log("Email:", email);
-    console.log("Password:", password);
+        res.json(response.data);
 
-    res.json({
-        message: "Login request received by API Gateway",
-    });
+    } catch (error) {
+        console.error("Auth Service error:", error.message);
+        res.status(500).json({
+            message: "Auth Service unavailable",
+        });
+
+    }
+
 });
 
 module.exports = router;
