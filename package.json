@@ -2,8 +2,12 @@
   "name": "booking-api-gateway",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "index.js",
   "scripts": {
+=======
+  "main": "index.js","scripts": {
+>>>>>>> 6009602ad96eb66a572cd596bd44639d14bb4fa5
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
